@@ -4,7 +4,6 @@ from PIL import Image, ImageTk
 
 global num_ram, ang_ram, prof, diam, decre
 
-
 #Ventana Pricipal-----------------------------------------------------------------------------------
 
 #Paleta de Colores:
@@ -22,9 +21,11 @@ def ven_prin(): # Ventana principal
     ven.config(bg= '#d8e3e7')
     ven.resizable(width= False, height= False)
 
-    #Labels de titulos y datos -------------------------------------------------------------------------------
+    global cont_gen
 
     cont_gen = 1
+
+    #Labels de titulos y datos -------------------------------------------------------------------------------
 
     titu = Label(ven, text= "Árboles Genéticos", bg= "#51c4d3", fg= "#132c33", font=("Times", 24), padx= 40) #Label del titulo 
     titu.place(x= 480, y= 20)
@@ -97,22 +98,56 @@ def ven_prin(): # Ventana principal
     #Botones de siguiente y anterior ---------------------------------------------------------------------------------
 
     def atras():
+        global cont_gen
+
+        cont_gen -= 1
+        gen.config(text="Generación "+str(cont_gen))
+
+        imag = Image.open("num" +str(cont_gen)+ ".png")
+        imag = imag.resize((200, 200), Image.ANTIALIAS)
+        ima = ImageTk.PhotoImage(imag)
+        label1.config(image= ima)
+        label1.image = ima
+        label2.config(image= ima)
+        label2.image = ima
+        label3.config(image= ima)
+        label3.image = ima
+        
+        if(cont_gen-1 == 0):
+            bot_ant.config(state= DISABLED)
+
         print("<")
         return
 
     def adelante():
+        global cont_gen
+
+        bot_ant.config(state= NORMAL)
+        cont_gen += 1
+        gen.config(text="Generación "+str(cont_gen))
+
+        imag = Image.open("num" +str(cont_gen)+ ".png")
+        imag = imag.resize((200, 200), Image.ANTIALIAS)
+        ima = ImageTk.PhotoImage(imag)
+        label1.config(image= ima)
+        label1.image = ima
+        label2.config(image= ima)
+        label2.image = ima
+        label3.config(image= ima)
+        label3.image = ima
+
         print(">")
         return
 
     photo1 = PhotoImage(file = "atras.png")   #Botón para ir atrás
     photoimage1 = photo1.subsample(1, 1)
-    bot_ant = Button(ven, image = photoimage1, bg= "#d8e3e7", activebackground= "#d8e3e7", relief= GROOVE, command=atras)
+    bot_ant = Button(ven, image = photoimage1, bg= "#d8e3e7", activebackground= "#d8e3e7", relief= GROOVE, state= DISABLED, command=atras)
     bot_ant.place(x= 100, y= 425)
 
     photo2 = PhotoImage(file = "adelante.png")   #Botón para ir adelante
     photoimage2 = photo2.subsample(1, 1)
-    bot_ant = Button(ven, image = photoimage2, bg= "#d8e3e7", activebackground= "#d8e3e7", relief= GROOVE, command=adelante)
-    bot_ant.place(x= 1095, y= 425)
+    bot_ade = Button(ven, image = photoimage2, bg= "#d8e3e7", activebackground= "#d8e3e7", relief= GROOVE, command=adelante)
+    bot_ade.place(x= 1095, y= 425)
 
     ven.mainloop()
 
