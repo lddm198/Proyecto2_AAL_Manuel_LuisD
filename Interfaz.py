@@ -25,10 +25,33 @@ def ven_prin(): # ventana principal
     titu = Label(ven, text= "Árboles Genéticos", bg= "#51c4d3", fg= "#132c33", font=("Times", 24), padx= 40)
     titu.place(x= 350, y= 20)
 
-    titu = Label(ven, text= "Número de Ramificaciones", bg= "#d8e3e7", fg= "#51c4d3", font=("Times", 14))
-    titu.place(x= 70, y= 95)
-    num_ent = Entry(ven, font=("Helvetica", 11), width= 6, justify= CENTER, fg= "#132c33")
-    num_ent.place(x= 140, y= 120)
+    gen = Label(ven, text= "Generación #", bg= "#d8e3e7", fg= "#132c33", font=("Times", 24), padx= 40)
+    gen.place(x= 380, y= 120)
+
+    rami = Label(ven, text= "Número de Ramificaciones", bg= "#d8e3e7", fg= "#51c4d3", font=("Times", 14))
+    rami.place(x= 30, y= 175)
+    num_ram = Label(ven, text= "##", bg= "#d8e3e7", fg= "#132c33", font=("Times", 14))
+    num_ram.place(x= 115, y= 200)
+
+    angu = Label(ven, text= "Ángulo de las Ramificaciones", bg= "#d8e3e7", fg= "#51c4d3", font=("Times", 14))
+    angu.place(x= 260, y= 175)
+    num_ang = Label(ven, text= "##°", bg= "#d8e3e7", fg= "#132c33", font=("Times", 14))
+    num_ang.place(x= 357, y= 200)
+
+    prof = Label(ven, text= "Profundidad", bg= "#d8e3e7", fg= "#51c4d3", font=("Times", 14))
+    prof.place(x= 510, y= 175)
+    num_pla = Label(ven, text= "##", bg= "#d8e3e7", fg= "#132c33", font=("Times", 14))
+    num_pla.place(x= 545, y= 200)
+
+    diam = Label(ven, text= "Diámetro Tronco", bg= "#d8e3e7", fg= "#51c4d3", font=("Times", 14))
+    diam.place(x= 635, y= 175)
+    num_dia = Label(ven, text= "##", bg= "#d8e3e7", fg= "#132c33", font=("Times", 14))
+    num_dia.place(x= 685, y= 200)
+
+    porc = Label(ven, text= "% Decremento Tronco", bg= "#d8e3e7", fg= "#51c4d3", font=("Times", 14))
+    porc.place(x= 790, y= 175)
+    num_por = Label(ven, text= "##%", bg= "#d8e3e7", fg= "#132c33", font=("Times", 14))
+    num_por.place(x= 855, y= 200)
 
     ven.mainloop()
 
