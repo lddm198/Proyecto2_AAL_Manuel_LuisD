@@ -66,8 +66,6 @@ def input(event):
 #while True:
     #input(pygame.event.wait())
 
-
-
 def fitness():
     #Esta es la función Fitness donde se puede parametrizar los árboles
 
