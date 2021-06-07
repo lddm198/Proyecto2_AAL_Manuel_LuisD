@@ -281,7 +281,7 @@ def ven_prin(): # Ventana principal
  
     ven = Tk()
     ven.title("Árboles Genéticos")
-#    ven.iconbitmap('logo_arbol.ico')
+    ven.iconbitmap('logo_arbol.ico')
     ven.geometry('1300x910+300+15')
     ven.config(bg= '#d8e3e7')
     ven.resizable(width= False, height= False)
@@ -319,31 +319,31 @@ def ven_prin(): # Ventana principal
     rami.place(x= 85, y= 175)
     var_ram = StringVar(ven)
     num_ram = ttk.OptionMenu(ven, var_ram, *lis_num)
-    num_ram.place(x= 170, y= 200)
+    num_ram.place(x= 150, y= 200)
 
     angu = Label(ven, text= "Ángulo de las Ramificaciones", bg= "#d8e3e7", fg= "#51c4d3", font=("Times", 14)) #Ángulo de las ramificaciones
     angu.place(x= 370, y= 175)
     var_ang = StringVar(ven)
     num_ang = ttk.OptionMenu(ven, var_ang, *lis_ang)
-    num_ang.place(x= 460, y= 200)
+    num_ang.place(x= 437, y= 200)
 
     prof = Label(ven, text= "Profundidad", bg= "#d8e3e7", fg= "#51c4d3", font=("Times", 14)) #Profundidad del arbol
     prof.place(x= 665, y= 175)
     var_pro = StringVar(ven)
     num_pro = ttk.OptionMenu(ven, var_pro, *lis_pro)
-    num_pro.place(x= 695, y= 200)
+    num_pro.place(x= 690, y= 200)
 
     diam = Label(ven, text= "Diámetro Tronco", bg= "#d8e3e7", fg= "#51c4d3", font=("Times", 14)) #Diámetro del tronco
     diam.place(x= 840, y= 175)
     var_dia = StringVar(ven)
     num_dia = ttk.OptionMenu(ven, var_dia, *lis_dia)
-    num_dia.place(x= 885, y= 200)
+    num_dia.place(x= 880, y= 200)
 
     porc = Label(ven, text= "% Decremento Tronco", bg= "#d8e3e7", fg= "#51c4d3", font=("Times", 14)) #Porcentaje del decremento del tronco
     porc.place(x= 1045, y= 175)
     var_por = StringVar(ven)
     num_por = ttk.OptionMenu(ven, var_por, *lis_dec)
-    num_por.place(x= 1115, y= 200)
+    num_por.place(x= 1105, y= 200)
 
     #Imagenes de los árboles -------------------------------------------------------------------------------------
 
@@ -465,7 +465,7 @@ def ven_prin(): # Ventana principal
 
         imagenes()
 
-        if(cont_gen == len(lista_generaciones)):
+        if(cont_gen+1 == len(lista_generaciones)):
             bot_ade.config(state= DISABLED)
 
         return
