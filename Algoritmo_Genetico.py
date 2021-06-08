@@ -425,15 +425,15 @@ def ven_prin(): # Ventana principal
             lis_dec.append(str(arbol[0][4])+"%")
 
         num_ram = ttk.OptionMenu(ven, var_ram, *lis_num)
-        num_ram.place(x= 170, y= 200)
+        num_ram.place(x= 150, y= 200)
         num_ang = ttk.OptionMenu(ven, var_ang, *lis_ang)
-        num_ang.place(x= 460, y= 200)
+        num_ang.place(x= 437, y= 200)
         num_pro = ttk.OptionMenu(ven, var_pro, *lis_pro)
-        num_pro.place(x= 695, y= 200)
+        num_pro.place(x= 690, y= 200)
         num_dia = ttk.OptionMenu(ven, var_dia, *lis_dia)
-        num_dia.place(x= 885, y= 200)
+        num_dia.place(x= 880, y= 200)
         num_por = ttk.OptionMenu(ven, var_por, *lis_dec)
-        num_por.place(x= 1115, y= 200)
+        num_por.place(x= 1105, y= 200)
 
         imagenes()
         
@@ -465,15 +465,15 @@ def ven_prin(): # Ventana principal
             lis_dec.append(str(arbol[0][4])+"%")
 
         num_ram = ttk.OptionMenu(ven, var_ram, *lis_num)
-        num_ram.place(x= 170, y= 200)
+        num_ram.place(x= 150, y= 200)
         num_ang = ttk.OptionMenu(ven, var_ang, *lis_ang)
-        num_ang.place(x= 460, y= 200)
+        num_ang.place(x= 437, y= 200)
         num_pro = ttk.OptionMenu(ven, var_pro, *lis_pro)
-        num_pro.place(x= 695, y= 200)
+        num_pro.place(x= 690, y= 200)
         num_dia = ttk.OptionMenu(ven, var_dia, *lis_dia)
-        num_dia.place(x= 885, y= 200)
+        num_dia.place(x= 880, y= 200)
         num_por = ttk.OptionMenu(ven, var_por, *lis_dec)
-        num_por.place(x= 1115, y= 200)
+        num_por.place(x= 1105, y= 200)
 
         imagenes()
 
