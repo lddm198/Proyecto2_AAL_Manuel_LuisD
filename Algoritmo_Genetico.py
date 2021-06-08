@@ -226,6 +226,8 @@ def algoritmo_genetico():
     contador_fotos = 0
     contador_gen += 1
 
+    lista_generaciones.append(lista)
+    
     lista_porcentajes.sort()
 
     lista_porcentajes_seleccionados = lista_porcentajes[3:]
@@ -259,6 +261,16 @@ def algoritmo_genetico():
         lista_porcentajes_seleccionados = lista_porcentajes[3:]
 
         lista_mejores_arboles = []
+
+        for elemento in lista_porcentajes_seleccionados:
+            if elemento > 25:
+                flag = True
+                break
+            else:
+                flag = False
+
+        if flag == True:
+            break
 
         for elemento in lista:
             if(elemento[1] in lista_porcentajes_seleccionados):
